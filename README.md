@@ -8,7 +8,7 @@
 * 访问localhost:9000即可
 
 ## Run 后端Module
-* <code>vcd cost-nodejs-services</code>
+* <code>cd cost-nodejs-services</code>
 * <code>npm install</code>
 * <code>node app.js</code>
 
