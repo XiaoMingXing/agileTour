@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>cost</artifactId>
+        <groupId>com.everydots.premium</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>cost-web-test</artifactId>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <CATALINA.HOME>/Users/syyan/Thoughtworks/package/apache-tomcat-7.0.70</CATALINA.HOME>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.everydots.premium</groupId>
+            <artifactId>cost-web-rest-services</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <type>war</type>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+    <profiles>
+        <profile>
+            <id>test</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.cargo</groupId>
+                        <artifactId>cargo-maven2-plugin</artifactId>
+                        <version>1.5.0</version>
+                        <configuration>
+                            <container>
+                                <containerId>tomcat7x</containerId>
+                                <home>${CATALINA.HOME}</home>
+                            </container>
+                            <configuration>
+                                <properties>
+                                    <cargo.servlet.port>10010</cargo.servlet.port>
+                                    <cargo.tomcat.ajp.port>10011</cargo.tomcat.ajp.port>
+                                </properties>
+                                <!--<type>standalone</type>-->
+                            </configuration>
+                            <deployables>
+                                <deployable>
+                                    <groupId>com.everydots.premium</groupId>
+                                    <artifactId>cost-web-rest-services</artifactId>
+                                    <type>war</type>
+                                    <properties>
+                                        <context>/cost</context>
+                                    </properties>
+                                </deployable>
+                            </deployables>
+                        </configuration>
+
+                        <executions>
+                            <execution>
+                                <id>start-server</id>
+                                <phase>pre-integration-test</phase>
+                                <goals>
+                                    <goal>start</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>stop-server</id>
+                                <phase>post-integration-test</phase>
+                                <goals>
+                                    <goal>stop</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <version>1.3</version>
+                        <executions>
+                            <execution>
+                                <id>e2e</id>
+                                <phase>integration-test</phase>
+                                <configuration>
+                                    <executable>grunt</executable>
+                                    <arguments>
+                                        <argument>${params}</argument>
+                                    </arguments>
+                                    <environmentVariables></environmentVariables>
+                                </configuration>
+                                <goals>
+                                    <goal>exec</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+</project>

@@ -1,0 +1,41 @@
+{
+  "name": "cost-web-test",
+  "version": "1.0.0",
+  "description": "test project,only for js unit test and end to end test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "blink-diff": "^1.0.13",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "cucumber": "^0.9.1",
+    "frisby": "^0.8.5",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.0",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-express-server": "^0.5.1",
+    "grunt-mkdir": "^1.0.0",
+    "grunt-mocha-test": "^0.12.7",
+    "grunt-protractor-cucumber-html-report": "^0.2.8",
+    "grunt-protractor-runner": "^3.2.0",
+    "grunt-usemin": "^3.1.1",
+    "jasmine": "^2.4.1",
+    "jasmine-spec-reporter": "^2.4.0",
+    "load-grunt-tasks": "^3.5.0",
+    "mocha": "^2.5.3",
+    "mochawesome": "^1.4.0",
+    "path": "^0.12.7",
+    "protractor": "^4.0.9",
+    "protractor-cucumber-framework": "^0.6.0",
+    "protractor-jasmine2-screenshot-reporter": "^0.3.2",
+    "supertest": "^1.2.0",
+    "uuid": "^3.0.1"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "consumer": {
+    "name": "service_consumer"
+  },
+  "provider": {
+    "name": "service_provider"
+  },
+  "interactions": [
+    {
+      "description": "expect login success",
+      "provider_state": "there is a valid username and password",
+      "request": {
+        "method": "post",
+        "path": "/cost/rest/auth/loginPact",
+        "body": "{\"username\":\"siyu\",\"password\":\"password\",\"email\":\"920477852@qq.com\"}"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "body": {
+          "data": {
+            "email": "920477852@qq.com"
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecificationVersion": "2.0.0"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "cost-web-test",
+  "description": "test project,only for js unit test and end to end test",
+  "main": "index.js",
+  "authors": [
+    "xiaomx <xiaomixinapple@gmail.com>"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

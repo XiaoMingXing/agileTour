@@ -1,0 +1,26 @@
+<div class="nav" ng-controller="NavController">
+    <div class="pc pc-display col-xs-9">
+        <ul class="nav-item-bar">
+            <li ng-repeat="item in navItems">
+                <a ui-sref="{{item.state}}">{{item.text}}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="mobile mobile-display col-xs-9">
+        <div class="icon dropdown">
+            <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                ☰
+            </button>
+            <ul id="mobile-dropdown" class="nav-item-bar dropdown-menu">
+                <li ng-repeat="item in navItems">
+                    <a ng-href="/#{{item.url}}">{{item.text}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-xs-3 pull-right">
+        <div class="userInfo">
+            <img src="../images/user.png">
+        </div>
+    </div>
+</div>
