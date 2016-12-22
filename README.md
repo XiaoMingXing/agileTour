@@ -21,18 +21,18 @@
 
 ### Backend
 * <code>cd cost-nodejs-services</code>
-* a. 在后端Module中运行Jasmine版的单元测试: <code>jasmine-node /ut-test/jasmine</code>
-  (note:使用<code>npm install -g jasmine-node</code>安装命令)
-* b. 在后端Module中运行Mocha版的单元测试: <code>mocha /ut-test/mocha</code>
-  (note:使用<code>npm install -g mocha</code>安装命令)
+* a. 在后端Module中运行Jasmine版的单元测试: <code>jasmine-node ut-test/jasmine</code>
+  (note:使用<code>npm install -g jasmine-node</code>安装Package)
+* b. 在后端Module中运行Mocha版的单元测试: <code>mocha ut-test/mocha/services</code>
+  (note:使用<code>npm install -g mocha</code>安装Package)
 
 
 ## Run API Test
 * <code>cd cost-web-test<code>
-* a. 在后端Module中运行FrisbyJs版的API测试: <code>jasmine-node /api-test/frisby</code>
-  (note:使用<code>npm install -g jasmine-node</code>安装命令)
-* b. 在后端Module中运行Supertest版的API测试: <code>mocha /api-test/supertest</code>
-  (note:使用<code>npm install -g mocha</code>安装命令)
+* a. 在后端Module中运行FrisbyJs版的API测试: <code>jasmine-node api-test/frisby</code>
+  (note:使用<code>npm install -g jasmine-node</code>安装Package)
+* b. 在后端Module中运行Supertest版的API测试: <code>mocha api-test/supertest</code>
+  (note:使用<code>npm install -g mocha</code>安装Package)
  
   
 ## Run PACT Test
