@@ -1,24 +1,40 @@
 # 基于javascript的敏捷测试
 
-##  Run 前端Module
+##  Add node_modules and bower_modules in cost-web-ui project
 * <code>cd cost-web-ui</code>
 * <code>npm intall</code>
 * <code>bower install</code>
-* <code>grunt server</code>
-* 访问localhost:9000即可
 
-## Run 后端Module
+##  Add node_modules in cost-nodejs-services project
 * <code>cd cost-nodejs-services</code>
 * <code>npm install</code>
 * <code>node app.js</code>
 
+##  Add node_modules in cost-web-test project
+* <code>cd cost-web-test</code>
+* <code>npm install</code>
+
 ## Run UT
-* <code>Frontend: <code>
-* <code>Backend:<code>
+### Frontend
+* <code>cd cost-web-ui</code>
+* 在前端Module中运行Jasmine版的单元测试: <code>grunt ut</code>
+
+### Backend
+* <code>cd cost-nodejs-services</code>
+* a. 在后端Module中运行Jasmine版的单元测试: <code>jasmine-node /ut-test/jasmine</code>
+  (note:使用<code>npm install -g jasmine-node</code>安装命令)
+* b. 在后端Module中运行Mocha版的单元测试: <code>mocha /ut-test/mocha</code>
+  (note:使用<code>npm install -g mocha</code>安装命令)
+
 
 ## Run API Test
-* <code>  <code>
-
+* <code>cd cost-web-test<code>
+* a. 在后端Module中运行FrisbyJs版的API测试: <code>jasmine-node /api-test/frisby</code>
+  (note:使用<code>npm install -g jasmine-node</code>安装命令)
+* b. 在后端Module中运行Supertest版的API测试: <code>mocha /api-test/supertest</code>
+  (note:使用<code>npm install -g mocha</code>安装命令)
+ 
+  
 ## Run PACT
 ### cost-web-ui
 Start mock service 
