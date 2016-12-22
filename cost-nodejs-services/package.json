@@ -27,12 +27,9 @@
     "nodemon": "^1.11.0",
     "pact-js-provider": "^1.1.5",
     "q": "^1.1.2",
-    "request": "^2.51.0",
     "serve-favicon": "~2.3.0",
     "sinon": "^1.17.6",
-    "underscore": "^1.8.3"
-  },
-  "devDependencies": {
+    "underscore": "^1.8.3",
     "babel-plugin-transform-class-properties": "^6.3.13",
     "babel-preset-stage-2": "^6.3.13",
     "frisby": "^0.8.5",
