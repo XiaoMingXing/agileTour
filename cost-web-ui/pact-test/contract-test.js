@@ -23,7 +23,7 @@
 
     it("should login", function (done) {
       authProvider
-        .given("there is a valid username and password")
+        .given("there is a valid username and password") //Provider States
         .uponReceiving("expect login success")
         .withRequest({
           method: "POST",
@@ -33,12 +33,11 @@
         .willRespondWith(200, {
           "Content-Type": "application/json; charset=utf-8"
         }, {
-          data: {email: "920477852@qq.com"}
+          data: {email: email}
         });
 
-      //Run the tests
       authProvider.run(done, function (runComplete) {
-        expect(client.login(requestBody).data.email).toEqual("920477852@qq.com");
+        expect(client.login(requestBody).data.email).toEqual(email);
         runComplete();
       });
     });
