@@ -51,5 +51,8 @@
   },
   "scripts": {
     "test": "grunt test"
+  },
+  "dependencies": {
+    "karma-coverage": "^1.1.1"
   }
 }

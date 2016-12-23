@@ -31,25 +31,4 @@ describe('User service test ->', function () {
         done();
     });
 
-    /* it('should return error message when email is not exist', function () {
-
-     });
-
-     it('should pass when user input correct email and password', function () {
-
-     });
-
-     //for register
-     it('should return error message when email is exist', function () {
-
-     });
-
-     it('should return error message when username is exist', function () {
-
-     });
-
-     it('should return new registered user when register success', function () {
-
-     });*/
-
 });

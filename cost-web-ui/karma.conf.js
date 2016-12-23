@@ -4,29 +4,32 @@
 module.exports = function (config) {
   config.set({
     // base path, that will be used to resolve files and exclude
-    basePath: '',
+    basePath: 'ut-test',
 
     // testing framework to use (jasmine/mocha/qunit/...)
     frameworks: ['jasmine'],
 
+    preprocessors: {
+      '../app/scripts/**/*.js': 'coverage'
+    },
 
     // list of files / patterns to load in the browser
     files: [
-      'bower_components/jquery/dist/jquery.js',
-      'bower_components/Chart.js/Chart.js',
-      'bower_components/angular/angular.js',
-      'bower_components/angular-mocks/angular-mocks.js',
-      'bower_components/angular-animate/angular-animate.js',
-      'bower_components/angular-cookies/angular-cookies.js',
-      'bower_components/angular-messages/angular-messages.js',
-      'bower_components/angular-resource/angular-resource.js',
-      'bower_components/angular-route/angular-route.js',
-      'bower_components/angular-sanitize/angular-sanitize.js',
-      'bower_components/angular-chart.js/angular-chart.js',
-      'bower_components/angular-ui-router/release/angular-ui-router.js',
-      'app/scripts/*.js',
-      'app/scripts/**/*.js',
-      'ut-test/spec/**/*.js'
+      '../bower_components/jquery/dist/jquery.js',
+      '../bower_components/Chart.js/Chart.js',
+      '../bower_components/angular/angular.js',
+      '../bower_components/angular-mocks/angular-mocks.js',
+      '../bower_components/angular-animate/angular-animate.js',
+      '../bower_components/angular-cookies/angular-cookies.js',
+      '../bower_components/angular-messages/angular-messages.js',
+      '../bower_components/angular-resource/angular-resource.js',
+      '../bower_components/angular-route/angular-route.js',
+      '../bower_components/angular-sanitize/angular-sanitize.js',
+      '../bower_components/angular-chart.js/angular-chart.js',
+      '../bower_components/angular-ui-router/release/angular-ui-router.js',
+      '../app/scripts/*.js',
+      '../app/scripts/**/*.js',
+      'spec/**/*.js'
     ],
 
     // list of files / patterns to exclude
@@ -53,6 +56,11 @@ module.exports = function (config) {
     // - PhantomJS
     // - IE (only Windows)
     browsers: ['PhantomJS'],
+
+    reporters: ['progress', 'coverage'],
+
+    plugins: ['karma-jasmine', 'karma-coverage', 'karma-phantomjs-launcher'],
+
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit
     singleRun: false

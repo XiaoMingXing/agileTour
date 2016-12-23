@@ -34,4 +34,9 @@ describe('User ->', function () {
         assert.calledWith(res.send, {status: true, data: "success"});
         done();
     }));
+
+    it('should invoke save when register', sinon.test(function (done) {
+
+    }));
+
 });
