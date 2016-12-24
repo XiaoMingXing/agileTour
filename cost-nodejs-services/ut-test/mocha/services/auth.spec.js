@@ -2,7 +2,6 @@
 
 var UserService = require('../../../scripts/services/manage/user-service');
 var User = require('../../../scripts/models/user');
-var expect = require('chai').expect;
 var sinon = require('sinon');
 var assert = sinon.assert;
 
@@ -35,8 +34,44 @@ describe('User ->', function () {
         done();
     }));
 
-    it('should invoke save when register', sinon.test(function (done) {
+    it('should register failed when user already exist', sinon.test(function (done) {
+        //given
+        this.stub(User.prototype, 'findByEmail', function () {
+            return {
+                then: function (callback) {
+                    callback({id: "userId"});
+                }
+            }
+        });
+        this.stub(User.prototype, 'save', function (callback) {
+            callback(null);
+        });
+        //when
+        UserService.register(req, res);
+        //then
+        assert.called(User.prototype.findByEmail);
+        assert.callCount(User.prototype.save,0);
+        done();
+    }));
 
+    it('should register success when user not exist', sinon.test(function (done) {
+        //given
+        this.stub(User.prototype, 'findByEmail', function () {
+            return {
+                then: function (callback) {
+                    callback(null);
+                }
+            }
+        });
+        this.stub(User.prototype, 'save', function (callback) {
+            callback(null);
+        });
+        //when
+        UserService.register(req, res);
+        //then
+        assert.called(User.prototype.findByEmail);
+        assert.callCount(User.prototype.save,0);
+        done();
     }));
 
 });

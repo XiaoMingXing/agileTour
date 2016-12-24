@@ -21,7 +21,7 @@
 
 ### Backend
 * <code>cd cost-nodejs-services</code>
-* a. 在后端Module中运行Jasmine版的单元测试: <code>jasmine-node ut-test/jasmine</code>
+* a. 在后端Module中运行Jasmine版的单元测试: <code>jasmine-node ut-test/jasmine  --verbose</code>
   (note:使用<code>npm install -g jasmine-node</code>安装Package)
 * b. 在后端Module中运行Mocha版的单元测试: <code>mocha ut-test/mocha/services</code>
   (note:使用<code>npm install -g mocha</code>安装Package)
