@@ -29,7 +29,7 @@
 
 ## Run API Test
 * <code>cd cost-web-test</code>
-* a. 在后端Module中运行FrisbyJs版的API测试: <code>jasmine-node api-test/frisby</code>
+* a. 在后端Module中运行FrisbyJs版的API测试: <code>jasmine-node api-test/frisby --verbose</code>
   (note:使用<code>npm install -g jasmine-node</code>安装Package)
 * b. 在后端Module中运行Supertest版的API测试: <code>mocha api-test/supertest</code>
   (note:使用<code>npm install -g mocha</code>安装Package)
