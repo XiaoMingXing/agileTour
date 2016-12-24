@@ -59,9 +59,3 @@
 
 * change path of img 
 * node cucumber-test/features/tools/diff.js
-
-
-
-
-
-

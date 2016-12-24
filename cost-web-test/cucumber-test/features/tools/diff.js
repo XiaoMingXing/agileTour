@@ -4,7 +4,7 @@ var BlinkDiff = require('blink-diff');
 
 var diff = new BlinkDiff({
     imageAPath: './cucumber-test/features/tools/expect.png',
-    imageBPath: './cucumber-test/features/tools/expect.png',
+       imageBPath: 'ebbba85b-1687-4bef-ab04-0e89e1d1461f.png',
 
     thresholdType: BlinkDiff.THRESHOLD_PERCENT,
     threshold: 0.01,
