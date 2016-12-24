@@ -8,6 +8,8 @@ describe('Test User Sevice APIs', function () {
             .get("http://localhost:9001/cost/rest/manage/user")
             .expectStatus(200)
             .expectHeaderContains('content-type', 'application/json')
+
+            //expect the first item of your response match obj
             .expectJSON('0', {
                 "_id": "584909924ae60b19d8410168",
                 "username": "4hy1m58im3kb6sekuia8ld6lxr",
