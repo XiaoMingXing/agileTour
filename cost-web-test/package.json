@@ -30,7 +30,7 @@
     "jasmine-spec-reporter": "^2.4.0",
     "load-grunt-tasks": "^3.5.0",
     "mocha": "^2.5.3",
-    "mochawesome": "^1.4.0",
+    "mochawesome": "^1.5.4",
     "path": "^0.12.7",
     "protractor": "^4.0.9",
     "protractor-cucumber-framework": "^0.6.0",

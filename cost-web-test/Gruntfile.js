@@ -96,9 +96,9 @@ module.exports = function (grunt) {
                 dest: './target/report',
                 output: './e2e.html'
             },
-            default:{
-                options:{
-                    testJSONResultPath:'./target/report/e2e.json'
+            default: {
+                options: {
+                    testJSONResultPath: './target/report/e2e.json'
                 }
             }
         },
@@ -129,11 +129,11 @@ module.exports = function (grunt) {
                     reporter: 'mochawesome', //You need to change this !
                     colors: true,
                     summery: true,
-                    captureFile: 'target/test-report.html',
+                    captureFile: 'api-test/reports/test-report.html',
                     quiet: false,
                     clearRequireCache: true
                 },
-                src: ['nodejs-api-test/supertest/*.js'],
+                src: ['api-test/supertest/*.js'],
                 excludes: ['plugins']
             }
         }
