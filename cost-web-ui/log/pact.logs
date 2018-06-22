@@ -1,5 +1,5 @@
-I, [2016-12-22T11:19:06.007585 #9561]  INFO -- : Registered expected interaction POST /cost/rest/auth/loginPact
-D, [2016-12-22T11:19:06.007945 #9561] DEBUG -- : {
+I, [2018-06-04T17:35:50.941001 #28203]  INFO -- : Registered expected interaction POST /cost/rest/auth/loginPact
+D, [2018-06-04T17:35:50.942830 #28203] DEBUG -- : {
   "description": "expect login success",
   "provider_state": "there is a valid username and password",
   "request": {
@@ -19,8 +19,8 @@ D, [2016-12-22T11:19:06.007945 #9561] DEBUG -- : {
     }
   }
 }
-I, [2016-12-22T11:19:06.010783 #9561]  INFO -- : Received request POST /cost/rest/auth/loginPact
-D, [2016-12-22T11:19:06.010875 #9561] DEBUG -- : {
+I, [2018-06-04T17:35:50.950424 #28203]  INFO -- : Received request POST /cost/rest/auth/loginPact
+D, [2018-06-04T17:35:50.951240 #28203] DEBUG -- : {
   "path": "/cost/rest/auth/loginPact",
   "query": "",
   "method": "post",
@@ -32,6 +32,7 @@ D, [2016-12-22T11:19:06.010875 #9561] DEBUG -- : {
     "Origin": "http://localhost:9090",
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1",
     "Accept": "*/*",
+    "Cookie": "io=ZKZLqHzrfaivW1CtAAAA",
     "Connection": "Keep-Alive",
     "Accept-Encoding": "gzip, deflate",
     "Accept-Language": "en-US,*",
@@ -39,8 +40,8 @@ D, [2016-12-22T11:19:06.010875 #9561] DEBUG -- : {
     "Version": "HTTP/1.1"
   }
 }
-I, [2016-12-22T11:19:06.011362 #9561]  INFO -- : Found matching response for POST /cost/rest/auth/loginPact
-D, [2016-12-22T11:19:06.011409 #9561] DEBUG -- : {
+I, [2018-06-04T17:35:50.953394 #28203]  INFO -- : Found matching response for POST /cost/rest/auth/loginPact
+D, [2018-06-04T17:35:50.953674 #28203] DEBUG -- : {
   "status": 200,
   "headers": {
     "Content-Type": "application/json; charset=utf-8"
@@ -51,6 +52,6 @@ D, [2016-12-22T11:19:06.011409 #9561] DEBUG -- : {
     }
   }
 }
-I, [2016-12-22T11:19:06.014764 #9561]  INFO -- : Verifying - interactions matched for example ""
-I, [2016-12-22T11:19:06.016928 #9561]  INFO -- : Writing pact with details {:consumer=>{:name=>"service_consumer"}, :provider=>{:name=>"service_provider"}}
-I, [2016-12-22T11:19:06.016993 #9561]  INFO -- : Writing pact for service_provider to tmp/pacts/service_consumer-service_provider.json
+I, [2018-06-04T17:35:50.960740 #28203]  INFO -- : Verifying - interactions matched for example ""
+I, [2018-06-04T17:35:50.964999 #28203]  INFO -- : Writing pact with details {:consumer=>{:name=>"service_consumer"}, :provider=>{:name=>"service_provider"}}
+I, [2018-06-04T17:35:50.965324 #28203]  INFO -- : Writing pact for service_provider to tmp/pacts/service_consumer-service_provider.json
